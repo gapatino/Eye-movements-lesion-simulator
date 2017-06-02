@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      Eyelesion
+    </title>
+    <link rel="StyleSheet" href="eyelesion.css">
+    <meta charset="utf-8">
+    <script src="eyelesion.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+
+    <div id="topsection">
+
+      <p> Eye movement direction </p>
+
+      <div id="row1">
+        <button type="button" class="key1" title="Toggle light on/off"
+        onclick="Light()">
+          &#128161;
+        </button> <!-- lightbulb -->
+        <button type="button" class="key1" title="Look up and right"
+        onclick="UpRight()">
+          &#x02196;
+        </button> <!-- NW arrow -->
+        <button type="button" class="key1" title="Look up" onclick="Up()">
+          &#x02191;
+        </button> <!-- N arrow -->
+        <button type="button" class="key1" title="Look up and left"
+        onclick="UpLeft()">
+          &#x02197;
+        </button> <!-- SE arrow -->
+      </div>
+
+      <div id="row2">
+        <button type="button" class="key1" title="Look at the tip of the nose"
+        onclick="TipNose()">
+          &#x02228;
+        </button> <!-- Nose tip -->
+        <button type="button" class="key1" title="Look right" onclick="Right()">
+          &#x02190;
+        </button> <!-- W arrow -->
+        <button type="button" class="key1" title="Look straight ahead"
+        onclick="Center()">
+          &#x02588;
+        </button> <!-- center -->
+        <button type="button" class="key1" title="Look left" onclick="Left()">
+          &#x02192;
+        </button> <!-- E arrow -->
+      </div>
+
+      <div id="row3">
+        <button type="button" class="key1" title="Convergent gaze"
+        onclick="Medial()">
+          &#x02227;
+        </button> <!-- Approaching target -->
+        <button type="button" class="key1"title="Look down and right"
+        onclick="DownRight()">
+          &#x02199;
+        </button> <!-- SW arrow -->
+        <button type="button" class="key1" title="Look down" onclick="Down()">
+          &#x02193;
+        </button> <!-- S arrow -->
+        <button type="button" class="key1" title="Look down and left"
+        onclick="DownLeft()">
+          &#x02198;
+        </button> <!-- SE arrow -->
+      </div>
+
+      <div id="row4">
+        <button type="button" id="lifteyelid" onclick="Lift()">
+          Lift eyelid
+        </button>
+      </div>
+
+      <div id="row5">
+
+        <p> Localization of the lesion: </p>
+
+        <select id="lesionlocus">
+          <option value="none"> None </option>
+          <option value="lhemisphere"> L frontal lobe </option>
+          <option value="rcnvinuc"> R CN VI nucleus  </option>
+          <option value="lmlf"> L Medial Longitudinal Fasciculus </option>
+          <option value="lcniiinuc"> L CN III nucleus </option>
+          <option value="rcnivnuc"> R CN IV nucleus </option>
+          <option value="rcnvi"> R CN VI </option>
+          <option value="lcniii"> L CN III </option>
+          <option value="lcniv"> L CN IV </option>
+          <option value="lsympathetic"> L Sympathetic fibers </option>
+          <option value="rsuprect"> R Superior Rectus muscle </option>
+          <option value="rlatrect"> R Lateral Rectus muscle </option>
+          <option value="ltarsal"> L Tarsal muscle </option>
+          <option value="llevpalp"> L Levator Palpebrae muscle </option>
+          <option value="lsuprect"> L Superior Rectus muscle </option>
+          <option value="lmedrect"> L Medial Rectus muscle </option>
+          <option value="linfrect"> L Inferior Rectus muscle </option>
+          <option value="lsupoblique"> L Superior Oblique muscle </option>
+          <option value="linfoblique"> L Inferior Oblique muscle </option>
+          <option value="ldilatorpup"> L Dilator Pupillae muscle </option>
+          <option value="lconstrictorpup"> L Constrictor Pupillae muscle </option>
+        </select>
+
+        <button type="button" id="sendlocus" onclick="SubmitLesion()">
+          Submit
+        </button>
+
+      <div>
+
+    </div> <!-- end topsection -->
+
+    <div id="bottomsection">
+
+      <svg id="eyes" width="1000" height="300" viewBox="0 0 1000 300">
+
+        <defs>
+
+          <clipPath id="reyepath">
+            <ellipse cx="250" cy="150" rx="220" ry="110" />
+          </clipPath>
+
+          <clipPath id="leyepath">
+            <ellipse cx="750" cy="150" rx="220" ry="110" />
+          </clipPath>
+
+        </defs>
+
+        <ellipse id="reye" cx="250" cy="150" rx="220" ry="110"
+        fill="white" stroke="black" stroke-width="1" />
+        <circle id="riris" cx="250" cy="150" r="100" fill="blue">
+          <animate id="irisanimation" attributeName="cx" from="130" to="200"
+          dur="1s" repeatCount="indefinite" begin="indefinite"/>
+        </circle>
+        <circle id="rpupil" cx="250" cy="150" r="50" fill="black">
+          <animate id="pupilanimation" attributeName="cx" from="130" to="200"
+          dur="1s" repeatCount="indefinite" begin="indefinite"/>
+        </circle>
+        <ellipse id="leye" cx="750" cy="150" rx="220" ry="110"
+        fill="white" stroke="black" stroke-width="1" />
+        <circle id="liris" cx="750" cy="150" r="100" fill="blue" />
+        <circle id="lpupil" cx="750" cy="150" r="50" fill="black" />
+        <ellipse id="eyelid" cx="750" cy="110" rx="200" ry="70" fill="brown" />
+
+      </svg>
+
+    </div>
+
+  </body>
+
+</html>
