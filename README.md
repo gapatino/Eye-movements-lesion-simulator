@@ -20,7 +20,4 @@ __Installation instructions:__
 7. The web app should appear in the current tab of your web-broser  
 8. If you want to edit the HTML file go to a text editor and load the file. We recommend Atom (https://atom.io/)  
 9. After making edits in the HTML file save them in the text editor. If you then refresh the file in the web-browser you will see the changes reflected    
-
-_Note:_ There is an animation for right eye nystagmus on rightward gaze when there is a lesion of the left medial longitudinal
-fasciculus (internuclear ophtalmoplegia). For some reason the animation doesn't work on Chrome until the user clicks on the "move right"
-button twice. 
+ 
